@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>src ="jquery3.7.1.js"    </script>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="formulaire.css">
+    <title>Formualire TP01</title>
+</head>
+<body>
+    <center> <h1>Formulaire</h1> </center>
+
+    <form id="Form" onsubmit="return Valide();">
+        
+        <label for="civilite">Civilité :</label>
+        <select name="civilite" id="civilite" required>
+            <option value="">Sélectionez</option>
+            <option value="Monsieur">Monsieur</option>
+            <option value="Madame">Madame</option>
+        </select>
+        <br><br>
+
+    <label for="Nom">Nom : </label>
+    <input type="text" id="nom" name="nom" required placeholder="Entrez votre Nom">
+    <br><br>
+
+    <label for="Prenom">Prénom : </label>
+    <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre Prenom">
+    <br><br>
+
+    <label for="Adresse">Adresse : </label>
+    <input type="text" id="adresse" name="adresse" required placeholder="Entrez votre Adresse">
+    <br><br>
+
+
+    <label for="Code Postal">Code Postal : </label>
+    <input type="text" id="cp" name="cp" required pattern="\d{5}" title="Le code postal doit avoir 5 chiffres" placeholder="Entrez votre code postal">
+    <br><br>
+
+    <label for="Ville">Ville : </label>
+    <input type="text" id="ville" name="ville" required placeholder="Entrez votre Ville">
+    <br><br>
+
+    <label for="NTel">Numéro de téléphone : </label>
+    <input type="text" id="ntel" name="ntel" required pattern="\d{10}" title="Le numéro de téléphone doit comporter 10 chiffres" placeholder="Entrez votre numéroo de téléphone">
+    <br><br>
+
+
+    <label for="EMail">ADresse Email : </label>
+    <input type="email" id="email" name="email" required placeholder="Entrez votre Adresse EMail">
+    <br><br>
+
+    <label for="login">Login :</label>
+    <input type="text" id="login" name="login" required minlength="5" maxlength="20" placeholder="Entrez votre login">
+    <br><br>
+
+    <label for="password">Mot de Passe :</label>
+    <input type="password" id="password" name="password" required minlength="5" placeholder="Entrez un mot de passe (5 caractères minimum)">
+    <br><br>
+
+    <div id="error_message style="color:red;" ></div>
+        <br><br>
+
+    <button id="submit" type="submit"> Envoyer FOrmualairee</button>
+
+    <script src="jquery3.7.1.js"></script>
+    <script src="formulaire.js"></script>
+
+    </form>
+</body>
+</html>
